@@ -1,0 +1,606 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin-top: 80px; /* pour que le contenu ne soit pas masqué par le menu fixe */
+}
+
+/* Effet de transition douce pour le scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff; /* Blanc pour contraste */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    border: 0;
+    overflow: hidden;
+}
+
+/* Logo de l'entreprise */
+.logo {
+    max-width: 60px;
+    height: auto;
+}
+
+.small-logo {
+    width: 60px;
+}
+
+/* Personnalisation de la navigation */
+.navbar {
+    background-color: #db700c;
+    padding: 15px 30px;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff; /* Or */
+    font-size: 1.2em;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffcc00; /* Jaune */
+}
+
+.navbar-nav .nav-item:not(:last-child) .nav-link {
+    padding-right: 15px;
+}
+
+/* Icône de la carte */
+.map-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Bouton "Commander" */
+.btn-custom {
+    background-color: #ffcc00;
+    color: #000;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre de base discrète */
+}
+
+.btn-custom:hover {
+    background-color: #fff; /* Fond blanc au survol */
+    color: black; /* Texte noir au survol */
+    transform: translateY(-3px); /* Légère élévation */
+    box-shadow: 0 0 15px 3px #ffcc00; /* Ombre jaune autour du bouton au survol */
+}
+
+.btn-custom:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-custom a:hover {
+    text-decoration: none;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #333;
+    color: #fff;
+}
+
+.modal-header, .modal-footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+/* Section d'image principale */
+.hero-video {
+    width: 100%; /* Rendre la vidéo responsive */
+    height: 100%; /* La vidéo doit remplir toute la hauteur */
+    object-fit: cover; /* L'image s'adapte sans déformation */
+}
+
+/* ------------------------------------------------------------------------------------------- BODY -------------------------------------------------------------------------------- */
+
+/* Trait de séparation */
+.separator {
+    border: 0; /* Retire les bordures par défaut */
+    height: 2px; /* Définit l'épaisseur du trait */
+    background-color: #db700c; /* Couleur orange */
+    width: 50%; /* Le trait prend 50% de la largeur de son conteneur */
+}
+
+.small-logo {
+    max-width: 80px;
+}
+
+.kefta {
+    color: #db700c;
+}
+
+.img-burger {
+    max-width: 280px;
+}
+
+.img-livreur {
+    max-width: 300px;
+}
+
+/* Section Nos Menus */
+.nos-menus h2 {
+    font-size: 2rem;
+    color: white; /* Couleur par défaut */
+}
+
+/* Style du lien englobant (c'est-à-dire la section) */
+.nos-menus-link {
+    display: inline-block;
+    background-color: #db700c; /* Cadre jaune */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4); /* Ombre rouge autour du bouton au survol */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 50%;
+}
+
+/* Effet de survol sur le lien (changement de fond et texte) */
+.nos-menus-link:hover {
+    transform: translateY(-3px); /* Légère élévation */
+    box-shadow: 0 0 15px 3px #ffffff; /* Ombre jaune autour du bouton au survol */;
+    text-decoration: none;
+}
+
+/* Changer la couleur du texte du titre au survol du lien */
+.nos-menus-link:hover h2 {
+    color: white; /* Le texte devient blanc */
+}
+
+/* Blocs de menu */
+.menu-block {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: #1616166b; /* Couleur de fond */
+    box-shadow: 0 2px 5px #db700c;
+    color: #fff; /* Couleur du texte pour qu'il soit visible sur fond sombre */
+    height: 350px; /* Hauteur fixe pour tous les blocs */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alignement du contenu à l'intérieur */
+    text-decoration: none;
+}
+
+/* Assurez-vous que toutes les images sont de la même taille */
+.menu-block img {
+    max-width: 100%; /* Ajustement de la largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    margin-top: 20px; /* Ajoute de l'espace entre le texte et l'image */
+    margin-bottom: 10px; /* Ajoute de l'espace entre l'image et le bouton */
+    max-height: 200px; /* Hauteur maximale de l'image pour garder les blocs uniformes */
+}
+
+/* Éléments au survol */
+.menu-block:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    color: #db700c;
+    text-decoration: none;
+
+}
+
+/* Centrer le texte dans les blocs */
+.menu-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Ajuste l'espacement sous le titre */
+}
+
+/* Conteneur de la vidéo */
+.desserts-video-container {
+    max-width: 600px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Vidéo (avec comportement responsive) */
+.desserts-video {
+    width: 100%; /* La vidéo s'adapte à la largeur de son conteneur */
+}
+
+/* Conteneur parent du carrousel, centré avec flexbox */
+.carousel-wrapper {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement si nécessaire */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+/* Styles pour le conteneur du carrousel */
+.carousel-container {
+    display: inline-block; /* Permet d'être en ligne tout en ayant des propriétés de bloc */
+    max-width: 600px; /* Largeur maximale pour les desktops */
+    width: 90%; /* Prend toute la largeur disponible en dessous de 1200px */
+    border-radius: 10px;
+    overflow: hidden; /* Pour arrondir les coins de l'image */
+    box-shadow: 0 4px 15px #db700c;
+    background-color: #1616166b;
+}
+
+/* Styles pour les images du carrousel */
+.carousel-item img {
+    width: 100%; /* S'assurer que l'image occupe toute la largeur du carrousel */
+    height: auto; /* Garder les proportions d'origine */
+    display: block;
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Styles des flèches de navigation */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Conteneur de la vidéo */
+.video-container {
+    max-width: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Styles pour la vidéo */
+.dining-video {
+    width: 100%; /* La vidéo s'adapte à la largeur du conteneur */
+    height: auto; /* Conserve le ratio d'aspect */
+    display: block; /* Supprime les espaces en bas de la vidéo */
+    max-width: 600px;
+}
+
+/* Section Avis Utilisateurs */
+.reviews-section {
+    padding: 40px 20px;
+}
+
+.review-block {
+    background-color: #db700c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* S'assurer que le bloc occupe toute la hauteur */
+}
+
+.review-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.815); /* Ombre blanche */
+}
+
+.review-block h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stars {
+    margin-bottom: 10px;
+    color: #ffb400; /* Couleur pour les étoiles */
+}
+
+.review-block p {
+    color: black;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.menu-center {
+    margin: 20px auto;
+}
+
+.deroulant {
+    max-width: 600px;
+}
+
+/* Cacher par défaut toutes les catégories */
+.menu-category {
+    display: none;
+}
+
+/* Afficher seulement la catégorie active */
+.menu-category.active {
+    display: block;
+}
+
+/* Style général des onglets */
+.menu-tabs {
+    margin: 10px;
+    background-color: #db700c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centre les onglets horizontalement */
+    gap: 30px; /* Espacement entre les onglets */
+    flex-wrap: wrap; /* Permet aux onglets de se déplacer à la ligne sur les petits écrans */
+    padding: 10px; /* Un peu d'espace autour des onglets */
+}
+
+.menu-tabs a.tab {
+    color: #333; /* Couleur de l'onglet */
+    font-size: 18px; /* Taille de police par défaut */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 10px 20px; /* Espacement interne pour chaque onglet */
+    transition: color 0.3s, transform 0.3s; /* Transition douce pour la couleur et l'agrandissement */
+    white-space: nowrap; /* Empêche le texte de se couper dans les onglets */
+}
+
+/* Style au survol */
+.menu-tabs a.tab:hover {
+    color: #fff; /* Couleur au survol */
+    transform: scale(1.1); /* Agrandissement de 10% au survol */
+}
+
+/* Style pour l'onglet actif (si tu veux garder une indication visuelle) */
+.menu-tabs a.tab.active {
+    color: #fff; /* Couleur de l'onglet actif */
+    font-weight: bold; /* Grasse pour l'onglet actif */
+    transform: scale(1.1); /* Agrandissement pour l'onglet actif */
+}
+
+.menu-tabs i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2rem; /* Taille de l'icône */
+}
+
+/* Style de la flèche */
+#scrollToTopBtn {
+    position: fixed; /* Fixe la flèche en bas à droite de la page */
+    bottom: 20px; /* Un peu d'espace du bas */
+    right: 20px; /* Un peu d'espace de la droite */
+    background-color: rgba(219, 112, 12, 0.8); /* Couleur orange (#db700c) avec transparence */
+    padding: 10px; /* Un peu de padding autour de la flèche */
+    border-radius: 50%; /* Forme ronde */
+    display: none; /* La flèche est cachée par défaut */
+    z-index: 9999; /* Elle sera toujours au-dessus des autres éléments */
+}
+
+/* Style du SVG (l'icône de la flèche) */
+#scrollToTopBtn svg {
+    width: 24px; /* Taille de l'icône */
+    height: 24px; /* Taille de l'icône */
+    fill: white; /* La couleur de la flèche est blanche */
+}
+
+/* Styles pour la section des cartes de postes */
+.job-card {
+    background-color: #1616166b;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px #db700c;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Assure que l'image et le texte sont bien répartis */
+    height: 100%; /* Force la hauteur à être égale pour chaque carte */
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    text-decoration: none;
+    box-shadow: 0 6px 12px #fff; /* Ombre rouge plus prononcée au survol */
+}
+
+.job-card img {
+    width: 100%;
+    height: 300px; /* Fixe la hauteur de l'image pour qu'elle soit uniforme */
+    object-fit: cover; /* L'image garde sa couverture sans déformer */
+}
+
+.job-info {
+    padding: 20px;
+    background-color: transparent;
+    flex-grow: 1; /* Cette ligne permet de faire en sorte que la section contenant le texte prenne tout l'espace restant */
+}
+
+.job-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.job-info button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.job-info button:hover {
+    background-color: #db700c;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------------------- FOOTER -------------------------------------------------------------------------------- */
+
+/* Styles pour le footer */
+footer {
+    background-color: #1616166b;
+}
+
+footer .logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-btn {
+    background-color: #db700c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-btn:hover {
+    background-color: white;
+    color: #db700c;
+}
+
+/* Augmenter l'espacement entre les liens dans le footer */
+footer .footer-links a {
+    margin-left: 15px;  /* Espacement à gauche des liens */
+    margin-right: 15px; /* Espacement à droite des liens */
+}
+
+/* Responsive - Menu mobile */
+@media (max-width: 768px) {
+    /* Conteneur global de la barre de navigation */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed; /* Fixé tout en haut de la page */
+        top: 0;
+        left: 0;
+        width: 100%; /* Prend toute la largeur */
+        z-index: 10; /* S'assurer que le menu passe au-dessus des autres éléments */
+        background-color: #db700c; /* Couleur de fond */
+        padding: 10px; /* Espacement interne */
+    }
+
+    /* Bouton Hamburger (placé à gauche) */
+    .navbar-toggler {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%); /* Centré verticalement */
+    }
+
+    /* Logo (placé à droite) */
+    .logo {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+        max-width: 50px; /* Limite la taille */
+    }
+
+    /* Liste de navigation (centrée) */
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Organisation verticale */
+        align-items: center;    /* Centrer les liens */
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Items de navigation */
+    .navbar-nav .nav-item {
+        margin: 0; /* Pas d'espacement entre les éléments */
+    }
+
+    /* Liens de navigation (texte uniquement cliquable) */
+    .navbar-nav .nav-item .nav-link {
+        display: inline-block;  /* Texte uniquement cliquable */
+        color: #fff;
+    }
+
+    /* Bouton "Commander" (centré sous le menu) */
+    .d-flex {
+        display: flex;
+        justify-content: center; /* Centre le bouton horizontalement */
+        margin-top: 20px;        /* Espacement sous la liste */
+        width: 100%;             /* Prend toute la largeur */
+    }
+
+    .btn-custom {
+        padding: 10px 20px;      /* Ajuste la taille */
+        font-size: 16px;         /* Ajuste la taille du texte */
+        margin-bottom: 20px;
+    }
+
+    /* Icône carte (cachée sur mobile) */
+    .map-icon {
+        display: none;
+    }
+
+    /* Pour l'affichage des onglets du menu */
+    .menu-tabs {
+        background-color: #343a40; /* Noir pour le conteneur */
+        padding: 10px;             /* Espacement interne */
+    }
+
+    .menu-tabs a.tab {
+        flex: 1 1 calc(50% - 30px); /* Deux onglets par ligne */
+        max-width: calc(50% - 30px);
+        color: #db700c;             /* Couleur personnalisée */
+        text-align: center;         /* Texte centré */
+        padding: 10px;              /* Espacement interne */
+    }
+
+    /* Pour l'affichage des onglets du menu */
+    .menu-tabs {
+        background-color: #343a40; /* Noir pour le conteneur */
+        padding: 10px;             /* Espacement interne */
+    }
+}
+
+/* Media query pour écrans plus petits que 370px */
+@media (max-width: 370px) {
+    .nos-menus h2 strong {
+        font-weight: normal;  /* Enlève le "strong" en le rendant normal */
+        font-size: 1.5rem;     /* Réduit la taille pour qu'il tienne dans le bloc */
+    }
+}

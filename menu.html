@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Menu - Kefta Burger à Nice | Livraison sur Nice, Saint Laurent du Var, Cagnes-sur-Mer, La Trinité</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Découvrez le menu de Kefta Burger à Nice : des burgers savoureux, des options pour toute la famille, et une livraison rapide sur Nice, Saint Laurent du Var, Cagnes-sur-Mer, La Trinité, Nice Nord et Nice Ouest.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Kefta Burger, menu, livraison Nice, burgers à Nice, fast food Nice, burgers de qualité, livraison Saint Laurent du Var, Cagnes-sur-Mer, La Trinité, burger de référence Nice, livraison rapide, menu familial, menu duo, hamburgers, restaurant à Nice, Nice Nord, Nice Ouest, repas à domicile, burger gourmet, livraison gratuite, Kefta">
+
+    <meta name="author" content="Kevin VINCENT / Kefta Burger">
+
+    <!-- Open Graph (OG) Tags -->
+    <meta property="og:title" content="Menu - Kefta Burger à Nice | Livraison sur Nice, Saint Laurent du Var, Cagnes-sur-Mer, La Trinité">
+    <meta property="og:description" content="Découvrez notre menu de burgers à Nice, avec des options savoureuses pour toute la famille et une livraison rapide sur Nice, Saint Laurent du Var, Cagnes-sur-Mer et La Trinité.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x628.png?text=Kefta+Burger+Menu">
+    <meta property="og:url" content="https://www.keftaburger-nice.com/menu">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menu - Kefta Burger à Nice | Livraison sur Nice, Saint Laurent du Var, Cagnes-sur-Mer, La Trinité">
+    <meta name="twitter:description" content="Découvrez notre menu avec des burgers délicieux et des options variées pour toute la famille à Nice et livraison sur Nice, Saint Laurent du Var, Cagnes-sur-Mer, La Trinité.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x628.png?text=Kefta+Burger+Menu">
+
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Adresse & Local SEO (générique) -->
+    <meta name="geo.region" content="FR">
+    <meta name="geo.placename" content="Kefta Burger, Nice">
+    <meta name="geo.position" content="43.7102;7.2620">
+    <meta name="ICBM" content="43.7102, 7.2620">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="design/style.css">
+
+    <!-- Lien vers la bibliothèque Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-dark text-white">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark rounded fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <img src="images/logo.png" alt="Logo du site web" class="logo">
+
+                <!-- Bouton Hamburger -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Liens de navigation -->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="postuler.html">Postuler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html#btncontact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bouton CTA -->
+                <div class="d-flex align-items-center">
+                    <a href="https://www.google.com/maps/place/Example+Address" target="_blank" aria-label="Voir la carte">
+                        <img src="images/map-icon.png" alt="Icône de carte pour voir l'emplacement" class="map-icon d-none d-md-block">
+                    </a>
+                    <a href="tel:+33123456789" class="btn btn-custom" aria-label="CTA">COMMANDER</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal Contact -->
+    <div id="contactModal" class="modal" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="contactModalLabel">Contactez-nous</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-dark text-white">
+                    <p><strong>Adresse :</strong> <span class="text-warning">Exemple d'adresse, 12345 Ville</span></p>
+                    <p><strong>Téléphone :</strong> <a href="tel:+33123456789" class="text-warning">+33 1 23 45 67 89</a></p>
+                    <p><strong>Email :</strong> <a href="mailto:contact@example.com" class="text-warning">contact@example.com</a></p>
+                </div>
+                <div class="modal-footer bg-dark">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Principale -->
+    <section class="hero">
+        <h1 class="visually-hidden">Vidéo de présentation</h1> <!-- Titre masqué pour l'accessibilité -->
+        <div class="container-fluid p-0">
+            <video class="hero-video" autoplay muted playsinline>
+                <source src="videos/burger.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </div>
+    </section>
+
+    <!-- Section Menu -->
+    <section class="menu-section py-5">
+        <div class="container text-center">
+            <!-- Logo Kefta Burger -->
+            <div class="mb-4">
+                <img src="images/logo.png" alt="Logo de Kefta Burger, restaurant de burgers à Nice, proposant une large sélection de plats gourmands, desserts et boissons" class="mb-2 small-logo">
+            </div>
+            
+            <!-- Trait de séparation -->
+            <hr class="separator my-4">
+            
+            <!-- Titre principal -->
+            <h2 id="retourfleche" class="section-title mb-4">Découvrez Notre Menu</h2>
+            
+            <!-- Texte introductif -->
+            <div class="content-text">
+                <p class="mt-3">
+                    Plongez dans l’univers gourmand de <span class="kefta">Kefta Burger</span> et laissez-vous tenter par une sélection généreuse de plats conçus pour combler toutes vos envies.
+                </p>
+                <p class="mt-4">
+                    Des burgers savoureux, des accompagnements croustillants, des desserts gourmands et des boissons rafraîchissantes vous attendent. Chez <span class="kefta">Kefta Burger</span>, il y en a pour tous les goûts, avec des options classiques, originales ou végétariennes pour satisfaire les amateurs de bon fast-food.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Menus -->
+    <section id="next-menu" class="menu-section">
+        <h2 class="visually-hidden">Nos Menus</h2>
+        <div class="menu-header text-center">
+            <!-- Navigation des catégories de menus -->
+            <div class="menu-tabs mb-5">
+                <a href="#burgers" class="tab active">
+                    <i class="fas fa-hamburger"></i>Burger
+                </a>
+                <a href="#tacos" class="tab">
+                    <i class="fa-solid fa-user-group"></i>Duo
+                </a>
+                <a href="#wraps" class="tab">
+                    <i class="fa-solid fa-people-group"></i>Family
+                </a>
+                <a href="#assiettes" class="tab">
+                    <i class="fas fa-utensils"></i>Assiettes
+                </a>
+                <a href="#desserts" class="tab">
+                    <i class="fas fa-cake"></i>Desserts
+                </a>
+                <a href="#boissons" class="tab">
+                    <i class="fas fa-cocktail"></i>Boissons
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catégorie simple -->
+    <div id="burgers" class="menu-category container active py-4">
+        <div class="row">
+            <!-- Bloc 1 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Cheese</h3>
+                    <img src="images/simple1.png" alt="Burger Cheese avec steak 45g, cornichon, oignon et cheddar" class="mb-3">
+                    <p class="price">5€90</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 2 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Double Cheese</h3>
+                    <img src="images/simple2.png" alt="Double Cheese avec 2 steaks 45g, cornichon, oignon et cheddar" class="mb-3">
+                    <p class="price">6€50</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 3 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Supreme</h3>
+                    <img src="images/simple3.png" alt="Supreme avec steak 100g, oignons crispy, emmental, salade et oignon" class="mb-3">
+                    <p class="price">7€90</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 4 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Crousti</h3>
+                    <img src="images/simple4.png" alt="Crousti avec poulet pané et salade fraîche" class="mb-3">
+                    <p class="price">6€70</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 5 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Bacon</h3>
+                    <img src="images/simple5.png" alt="Bacon avec steak 100g, bacon, salade, tomate et cheddar" class="mb-3">
+                    <p class="price">6€30</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 6 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Big Chicken</h3>
+                    <img src="images/simple6.png" alt="Big Chicken avec 2 poulets panés, salade, cornichon, cheddar et oignon" class="mb-3">
+                    <p class="price">7€50</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 7 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Kiri</h3>
+                    <img src="images/simple7.png" alt="Burger Kiri avec steak 45g, kiri, salade et cheddar" class="mb-3">
+                    <p class="price">6€90</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 8 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Chicken</h3>
+                    <img src="images/simple8.png" alt="Chicken avec poulet pané original ou spicy, cheddar et salade" class="mb-3">
+                    <p class="price">7€70</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 9 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Chèvre</h3>
+                    <img src="images/simple9.png" alt="Chèvre avec 2 steaks 45g, chèvre, salade et cheddar" class="mb-3">
+                    <p class="price">7€50</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 10 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Big</h3>
+                    <img src="images/simple10.png" alt="Big avec 2 steaks 45g, salade, cornichon, cheddar et oignon" class="mb-3">
+                    <p class="price">6€70</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 11 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Géant</h3>
+                    <img src="images/simple11.png" alt="Géant avec 2 steaks 45g, salade, cheddar et oignon" class="mb-3">
+                    <p class="price">7€50</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 12 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Spicy Tower</h3>
+                    <img src="images/simple12.png" alt="Spicy Tower avec poulet spicy, galette de pomme de terre, salade et sauce spicy" class="mb-3">
+                    <p class="price">7€90</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 13 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Fish</h3>
+                    <img src="images/simple13.png" alt="Fish avec poisson pané, cheddar et sauce fish" class="mb-3">
+                    <p class="price">6€90</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 14 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Le 260</h3>
+                    <img src="images/simple14.png" alt="Le 260 avec steak 100g, tomate, oignon, emmental et cheddar" class="mb-3">
+                    <p class="price">7€50</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 15 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Chicken Beef</h3>
+                    <img src="images/simple15.png" alt="Chicken Beef avec poulet pané, steak 45g, salade, cornichon et cheddar" class="mb-3">
+                    <p class="price">8€30</p>
+                </div>
+            </div>
+    
+            <!-- Bloc 16 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Boursin</h3>
+                    <img src="images/simple16.png" alt="Boursin avec steak 45g, boursin, salade et cheddar" class="mb-3">
+                    <p class="price">6€90</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catégorie Duo -->
+    <div id="tacos" class="menu-category container py-4">
+        <div class="row">
+            <!-- Bloc 1 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Géant + Big</h3>
+                    <img src="images/duo1.png" alt="Géant + Big avec 2 steaks 45g, salade, cornichon, cheddar, oignon" class="mb-3">
+                    <p class="price">13€50</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 2 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Big + Double Cheese</h3>
+                    <img src="images/duo2.png" alt="Big + Double Cheese avec 2 steaks 45g, cornichon, oignon, cheddar" class="mb-3">
+                    <p class="price">12€40</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 3 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>2 Géants</h3>
+                    <img src="images/duo3.png" alt="2 Géants avec 2 steaks 45g, salade, cheddar et oignon" class="mb-3">
+                    <p class="price">14€90</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 4 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>260 + Big</h3>
+                    <img src="images/duo4.png" alt="260 + Big avec steak 100g, tomate, oignon, emmental, cheddar et 2 steaks 45g, salade" class="mb-3">
+                    <p class="price">13€90</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 5 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Chicken + Big</h3>
+                    <img src="images/duo5.png" alt="Chicken + Big avec poulet pané, cheddar, salade et 2 steaks 45g, salade, cheddar et oignon" class="mb-3">
+                    <p class="price">13€00</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 6 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Spicy Tower + 3 Tenders</h3>
+                    <img src="images/duo6.png" alt="Spicy Tower + 3 Tenders avec poulet spicy, galette de pomme de terre, salade, sauce spicy et 3 tenders de poulet" class="mb-3">
+                    <p class="price">15€30</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 7 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Big + Spicy Tower</h3>
+                    <img src="images/duo7.png" alt="Big + Spicy Tower avec 2 steaks 45g, salade, cheddar et oignon, poulet spicy, galette de pomme de terre et sauce spicy" class="mb-3">
+                    <p class="price">14€50</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 8 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>2 Big</h3>
+                    <img src="images/duo8.png" alt="2 Big avec 2 steaks 45g, salade, cheddar, oignon et 2 steaks 45g, salade, cheddar, oignon" class="mb-3">
+                    <p class="price">13€40</p>
+                </div>
+            </div>
+        
+            <!-- Bloc 9 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Chèvre + Kiri</h3>
+                    <img src="images/duo9.png" alt="Chèvre + Kiri avec 2 steaks 45g, chèvre, salade, cheddar et steak 45g, kiri, salade et cheddar" class="mb-3">
+                    <p class="price">14€30</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catégorie Family -->
+    <div id="wraps" class="menu-category container py-4">
+        <div class="row">
+            <!-- Bloc Family -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Family</h3>
+                    <img src="images/menu-family.png" alt="2 Géants et 2 Double Cheese avec 2 steaks 45g, salade, cheddar, oignon, et 2 steaks 45g, cornichon, oignon, cheddar" class="mb-3">
+                    <p class="price">27€90</p>
+                </div>
+            </div>
+        
+            <!-- Bloc Extra tout par 4 -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Extra tout par 4</h3>
+                    <img src="images/extras.png" alt="4 Tenders, 4 Nuggets, 4 Onion Rings, 4 Mozzarella Sticks" class="mb-3">
+                    <p class="price">16€50</p>
+                </div>
+            </div>
+        
+            <!-- Bloc Frites -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Frites</h3>
+                    <img src="images/frites.png" alt="Frites croustillantes servies en portion généreuse" class="mb-3">
+                    <p class="price">2€90</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catégorie Assiettes -->
+    <div id="assiettes" class="menu-category container py-4">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Assiette Kebab</h3>
+                    <img src="images/kebab.png" alt="Assiette Kebab avec viande grillée, frites et légumes" class="mb-3">
+                    <p class="price">7€</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Assiette Poulet pané</h3>
+                    <img src="images/pane.png" alt="Assiette de poulet pané avec frites et salade" class="mb-3">
+                    <p class="price">8€</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Assiette Steak à cheval</h3>
+                    <img src="images/cheval.png" alt="Assiette avec steak à cheval, frites et légumes" class="mb-3">
+                    <p class="price">8€50</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catégorie Desserts -->
+    <div id="desserts" class="menu-category container py-4">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Muffin</h3>
+                    <img src="images/dessert4.png" alt="Muffin au chocolat moelleux et savoureux" class="mb-3">
+                    <p class="price">3€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Tarte tatin</h3>
+                    <img src="images/tatin.png" alt="Tarte tatin aux pommes caramélisées et fondantes" class="mb-3">
+                    <p class="price">3€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Compote</h3>
+                    <img src="images/dessert5.png" alt="Compote de fruits au goût sucré et léger" class="mb-3">
+                    <p class="price">1€50</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Donuts</h3>
+                    <img src="images/dessert7.png" alt="Donuts sucrés, à la texture légère et parfumée" class="mb-3">
+                    <p class="price">2€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Moelleux chocolat</h3>
+                    <img src="images/dessert8.png" alt="Moelleux au chocolat fondant et riche en cacao" class="mb-3">
+                    <p class="price">3€50</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Mousse au chocolat</h3>
+                    <img src="images/dessert3.png" alt="Mousse au chocolat crémeuse et aérée" class="mb-3">
+                    <p class="price">3€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Tiramisu</h3>
+                    <img src="images/tiramisu.png" alt="Tiramisu classique avec une couche crémeuse et savoureuse" class="mb-3">
+                    <p class="price">3€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Tarte au daim</h3>
+                    <img src="images/daim.png" alt="Tarte avec morceaux de daim croquants et caramel fondant" class="mb-3">
+                    <p class="price">3€70</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Autres parfums</h3>
+                    <ul class="other-flavors">
+                        <li>Compote de fraise</li>
+                        <li>Donuts : sucre</li>
+                        <li>Mini Donuts : choco, caramel, fraise</li>
+                        <li>Muffin : myrtille</li>
+                        <li>Tiramisu : oreo, fraise, daim, chocolat</li>
+                        <li>Tarte : Milka</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catégorie Boissons -->
+    <div id="boissons" class="menu-category container py-4">
+        <div class="row">
+            <!-- Bloc 1 : Coca / Cherry / Zero -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Coca / Cherry / Zero</h3>
+                    <img src="images/coca.png" alt="Canette de Coca-Cola" class="mb-3">
+                    <p class="price">1€70</p>
+                </div>
+            </div>
+            
+            <!-- Bloc 2 : Orangina -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Orangina</h3>
+                    <img src="images/orangina.png" alt="Canette d'Orangina" class="mb-3">
+                    <p class="price">1€70</p>
+                </div>
+            </div>
+
+            <!-- Bloc 3 : Fanta -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Fanta</h3>
+                    <img src="images/fanta.png" alt="Canette de Fanta" class="mb-3">
+                    <p class="price">1€70</p>
+                </div>
+            </div>
+
+            <!-- Bloc 4 : Ice Tea -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Ice Tea</h3>
+                    <img src="images/icetea.png" alt="Canette de Ice Tea" class="mb-3">
+                    <p class="price">1€70</p>
+                </div>
+            </div>
+
+            <!-- Bloc 5 : Oasis -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Oasis</h3>
+                    <img src="images/oasis.png" alt="Canette de Oasis" class="mb-3">
+                    <p class="price">1€70</p>
+                </div>
+            </div>
+
+            <!-- Bloc 6 : Eau pétillante -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Eau pétillante</h3>
+                    <img src="images/petillante.png" alt="Bouteille d'eau pétillante" class="mb-3">
+                    <p class="price">1€50</p>
+                </div>
+            </div>
+
+            <!-- Bloc 7 : Monster Energy -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Monster Energy</h3>
+                    <img src="images/monster.png" alt="Canette de Monster Energy" class="mb-3">
+                    <p class="price">2€50</p>
+                </div>
+            </div>
+
+            <!-- Bloc 8 : Capri Sun -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Capri Sun</h3>
+                    <img src="images/caprisun.png" alt="Capri Sun" class="mb-3">
+                    <p class="price">1€20</p>
+                </div>
+            </div>
+
+            <!-- Bloc 9 : Autres boissons -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="menu-block text-center p-4">
+                    <h3>Autres boissons</h3>
+                    <ul class="other-flavors">
+                        <li>Pepsi</li>
+                        <li>Fanta Fruit du Dragon</li>
+                        <li>Oasis Pomme Cassis Framboise</li>
+                        <li>Eau plate</li>
+                        <li>Nos boissons sont disponibles en grand format</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section menu déroulant livraison -->
+    <section id="livraison" class="container my-1 deroulant">
+        <h2 class="text-center">Livraison chez <span class="kefta">Kefta</span> Burger</h2>
+    
+        <form class="verif">
+            <div class="form-group">
+                <label for="ville">Sélectionnez votre ville pour connaître le montant minimum de commande :</label>
+                <select class="form-control" id="ville">
+                    <option value="" disabled selected>Choix de la ville...</option> <!-- Option par défaut -->
+                    <option value="nice">Nice</option>
+                    <option value="trinite">La Trinité</option>
+                    <option value="saint_laurent">Saint-Laurent-du-Var</option>
+                    <option value="cagnes">Cagnes-sur-Mer</option>
+                </select>                
+            </div>    
+            <div id="infoLivraison" class="alert mt-3" style="display: none;">
+                <!-- Le contenu se mettra à jour dynamiquement ici -->
+            </div>
+        </form>
+        <hr class="my-1 mb-5 mt-5 separator">
+    </section>  
+
+    <!-- Flèche vers le haut -->
+    <a href="#retourfleche" class="scroll-to-top" id="scrollToTopBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="text-white py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo et Nom -->
+            <div class="logo-footer d-flex align-items-center mb-3 mb-md-0">
+                <img src="images/logo.png" alt="Logo de l'entreprise" class="me-2" style="height: 40px;">
+            </div>
+
+            <!-- Horaires -->
+            <div class="container text-center mt-3">
+                <p><strong>Horaires :</strong></p>
+                <p>Lundi : Fermé</p>
+                <p>Du Mardi au Vendredi : 11h00 - 22h00</p>
+                <p>Samedi et Dimanche : 11h00 - 23h00</p>
+            </div>
+
+            <!-- Liens du Footer et Réseaux Sociaux -->
+            <div class="footer-links d-flex flex-column flex-md-row align-items-center">
+                <div class="social-icons mb-3 mb-md-0 me-md-3">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Icône du réseau social Instagram" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Icône du réseau social Facebook" class="social-icon"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="images/snapchat.png" alt="Icône du réseau social Snapchat" class="social-icon"></a>
+                </div>
+                <button id="btncontact" class="contact-btn btn btn-warning mb-2 mb-md-0 ml-md-3" data-toggle="modal" data-target="#contactModal">Contact</button>
+                <a href="mentions.html" class="text-white ms-md-2 me-md-3">Mentions légales</a>
+                <a href="politique.html" class="text-white ms-md-2">Politique de confidentialité</a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2024 Kefta. Tous droits réservés.</p>
+        </div>
+    </footer>  
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS personnalisé -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
